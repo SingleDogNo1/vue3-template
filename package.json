@@ -4,16 +4,28 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --ext .ts,.js,.vue,.css,.json,.scss src --fix"
   },
   "dependencies": {
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-define-config": "^1.0.8",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
     "vue-tsc": "^0.0.24"
+  },
+  "engines": {
+    "node": "^12 || >=14"
   }
 }
