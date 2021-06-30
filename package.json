@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "lint": "eslint --ext .ts,.js,.vue,.css,.json,.scss src --fix"
+    "lint:eslint": "eslint \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
+    "lint": "yarn lint:eslint"
   },
   "dependencies": {
     "vue": "^3.0.5"

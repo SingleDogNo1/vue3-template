@@ -2,8 +2,7 @@ module.exports = {
   printWidth: 100,
   tabWidth: 2,
   useTabs: false,
-  semi: true,
-  vueIndentScriptAndStyle: true,
+  semi: false,
   singleQuote: true,
   quoteProps: 'as-needed',
   bracketSpacing: true,
@@ -17,4 +16,4 @@ module.exports = {
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'lf',
   rangeStart: 0,
-};
+}
