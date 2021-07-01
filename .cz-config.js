@@ -25,7 +25,6 @@ module.exports = {
       value: 'refactor',
       name: '🛠   refactor:     既不是新增功能，也不是修改bug的代码变动',
     },
-
     {
       value: 'chore',
       name: '🗯   chore:        更改环境配置相关文件',
