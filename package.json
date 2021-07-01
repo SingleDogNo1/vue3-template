@@ -7,21 +7,35 @@
     "serve": "vite preview",
     "lint:eslint": "eslint \"{src,mock}/**/*.{vue,ts,tsx,js,jsx,css,scss,postcss}\" --fix",
     "lint:stylelint": "stylelint \"**/*.{vue,postcss,css,scss}\" --fix",
-    "lint": "yarn lint:eslint && yarn lint:stylelint"
+    "lint": "yarn lint:eslint && yarn lint:stylelint",
+    "commit": "git-cz",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "dependencies": {
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-define-config": "^1.0.8",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.12.1",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
