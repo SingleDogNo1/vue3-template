@@ -1,0 +1,36 @@
+{
+  "vue3 + ts": {
+    "prefix": "vue3",
+    "body": [
+      "<template>",
+			"  <div class=\"$1\">",
+			"    {{ msg }}",
+      "  </div>",
+			"</template>",
+			"",
+			"<script lang=\"ts\">",
+			"import { defineComponent, reactive, toRefs } from 'vue'",
+			"",
+			"export default defineComponent({",
+			"  name: '$1',",
+			"  setup(props, ctx) {",
+			"    const state = reactive({",
+			"      msg: 'hello, $1'",
+			"    })",
+			"",
+			"    return {",
+			"      ...toRefs(state)",
+			"    }",
+			"  }",
+      "})",
+			"</script>",
+			"",
+			"<style scoped lang=\"scss\">",
+			".$1 {",
+			"}",
+			"</style>",
+			"",
+    ],
+    "description": "vue3 + ts 模板"
+	}
+}

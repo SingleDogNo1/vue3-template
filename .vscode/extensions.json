@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "dariofuzinato.vue-peek",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "hollowtree.vue-snippets",
+    "loiane.ts-extension-pack",
+    "lokalise.i18n-ally",
+    "mikestead.dotenv",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "octref.vetur",
+    "pmneo.tsimporter",
+    "rbbit.typescript-hero",
+    "streetsidesoftware.code-spell-checker",
+    "mrmlnc.vscode-scss",
+    "stringham.move-ts",
+    "stylelint.vscode-stylelint"
+  ]
+}
