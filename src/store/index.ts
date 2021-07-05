@@ -1,8 +1,27 @@
-/*
- * @Author: your name
- * @Date: 2021-06-29 14:32:04
- * @LastEditTime: 2021-06-29 14:32:05
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /vue3-template/src/store/index.ts
- */
+import { InjectionKey, App } from 'vue'
+import { createStore, Store, useStore as baseUseStore } from 'vuex'
+import { AllState } from './types'
+import createPersistedState from 'vuex-persistedstate'
+import user from './modules/user'
+
+export const store = createStore<AllState>({
+  plugins: [
+    createPersistedState({
+      storage: window.sessionStorage,
+    }),
+  ],
+  modules: {
+    user,
+  },
+})
+
+export const key: InjectionKey<Store<AllState>> = Symbol('vue-store')
+
+export function useStore<T = AllState>(): Store<T> {
+  return baseUseStore<T>(key)
+}
+
+// config-store
+export function setupStore(app: App<Element>) {
+  app.use(store, key)
+}

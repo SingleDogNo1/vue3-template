@@ -3,6 +3,7 @@
     "bottomleft",
     "bottomright",
     "commitlint",
+    "persistedstate",
     "stylelint",
     "topleft",
     "topright",
