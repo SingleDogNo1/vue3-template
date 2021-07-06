@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     {{ name }} -- {{ token }}
-    <button @click="changeName('李四')">按钮</button>
+    <el-button @click="changeName('李四')">按钮</el-button>
   </div>
 </template>
 

@@ -8,7 +8,7 @@ export function checkStatus(status: number, msg: string): void {
     case 401:
       console.log('未登录')
       router.push({
-        name: 'login',
+        name: 'root',
       })
       break
     case 403:
