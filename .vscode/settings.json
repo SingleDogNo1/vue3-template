@@ -5,6 +5,7 @@
     "commitlint",
     "persistedstate",
     "stylelint",
+    "tailwindcss",
     "topleft",
     "topright",
     "vitejs"

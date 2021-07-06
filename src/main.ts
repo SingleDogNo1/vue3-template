@@ -1,3 +1,5 @@
+import './styles/index.scss'
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import { router, setupRouter } from './router'

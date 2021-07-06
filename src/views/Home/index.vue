@@ -2,6 +2,7 @@
   <div class="home">
     {{ name }} -- {{ token }}
     <el-button @click="changeName('李四')">按钮</el-button>
+    <button class="px-4 py-2 border rounded border-dark-800">button</button>
   </div>
 </template>
 
@@ -34,9 +35,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped lang="scss">
-.home {
-  color: red;
-}
-</style>
