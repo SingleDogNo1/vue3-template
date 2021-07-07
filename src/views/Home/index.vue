@@ -41,7 +41,6 @@ export default defineComponent({
 
 <style lang="scss">
 .btn {
-  // color: $--color-danger;
-  color: red;
+  color: $--color-danger;
 }
 </style>
