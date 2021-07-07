@@ -1,0 +1,9 @@
+$--color-primary: rgba(21, 134, 179, 0.9);
+$--color-danger: rgb(211, 16, 65);
+$--color-warning: hsla(200, 20%, 20%, 20%);
+
+:export {
+  themeColor: $--color-primary;
+  dangerColor: $--color-danger;
+  warningColor: $--color-warning;
+}
