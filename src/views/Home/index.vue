@@ -41,6 +41,8 @@ export default defineComponent({
 
 <style lang="scss">
 .btn {
+  @include center;
+
   color: $--color-danger;
 }
 </style>

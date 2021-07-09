@@ -1,4 +1,4 @@
-import styles from '@/styles/variables/var.scss'
+import styles from '@/assets/scss/globCss.scss'
 
 export const useGlobCss = (): any => {
   const cssStr = styles

@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+
+:export {
+  themeColor: $--color-primary;
+  dangerColor: $--color-danger;
+  warningColor: $--color-warning;
+}
