@@ -7,9 +7,10 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, toRefs } from 'vue'
+import { computed, defineComponent, onMounted, reactive, toRefs } from 'vue'
 import { useStore } from '@/store'
 import { useGlobCss } from '@/hooks/globCss'
+import { getUserInfoApi } from '@/api/user'
 
 export default defineComponent({
   name: 'Home',
@@ -27,6 +28,12 @@ export default defineComponent({
     function changeName(name) {
       store.commit('user/SET_NAME', name)
     }
+
+    onMounted(() => {
+      getUserInfoApi().then((res) => {
+        console.log('res :>> ', res)
+      })
+    })
 
     return {
       ...toRefs(state),

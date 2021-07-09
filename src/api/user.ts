@@ -1,7 +1,7 @@
 import request from '@/utils/axios'
 
-export function getList() {
+export function getUserInfoApi() {
   return request.get({
-    url: '/slimePoolRecord/setting',
+    url: '/getUserInfo',
   })
 }

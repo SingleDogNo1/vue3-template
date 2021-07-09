@@ -5,20 +5,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, onMounted } from 'vue'
-import { getList } from '@/api/index'
+import { defineComponent, reactive, toRefs } from 'vue'
 
 export default defineComponent({
   name: 'About',
   setup() {
     const state = reactive({
       msg: 'hello, about',
-    })
-
-    onMounted(() => {
-      getList().then((res) => {
-        console.log('res :>> ', res)
-      })
     })
 
     return {

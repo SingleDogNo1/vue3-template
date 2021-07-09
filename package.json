@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.54",
+    "mockjs": "^1.1.0",
     "qs": "^6.10.1",
     "vue": "^3.0.5",
     "vue-router": "4",
@@ -55,6 +56,7 @@
     "tailwindcss": "^2.2.4",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
+    "vite-plugin-mock": "^2.9.1",
     "vue-tsc": "^0.0.24"
   },
   "engines": {
