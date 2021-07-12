@@ -156,7 +156,6 @@ const transform: AxiosTransform = {
       showLoading()
     }
 
-    console.log('config :>> ', config)
     return config
   },
 

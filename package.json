@@ -9,7 +9,8 @@
     "lint:stylelint": "stylelint \"**/*.{vue,postcss,css,scss}\" --fix",
     "lint": "yarn lint:eslint && yarn lint:stylelint",
     "commit": "git-cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vite --config vite.config.test.ts"
   },
   "config": {
     "commitizen": {
@@ -29,12 +30,16 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/jest": "^25.2.1",
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vue/test-utils": "^2.0.0-rc.10",
     "autoprefixer": "^10.2.6",
+    "babel-jest": "^25.2.6",
     "commitizen": "^4.2.4",
     "commitlint-config-cz": "^0.13.2",
     "cz-conventional-changelog": "^3.3.0",
@@ -48,15 +53,20 @@
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
+    "puppeteer": "^10.1.0",
     "sass": "^1.35.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "tailwindcss": "^2.2.4",
+    "ts-jest": "^25.3.1",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
     "vite-plugin-mock": "^2.9.1",
+    "vite-plugin-test": "^0.0.5",
+    "vue-jest": "^5.0.0-alpha.10",
+    "jest": "^25.2.7",
     "vue-tsc": "^0.0.24"
   },
   "engines": {

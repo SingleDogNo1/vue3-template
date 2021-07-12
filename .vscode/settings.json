@@ -3,6 +3,7 @@
     "bottomleft",
     "bottomright",
     "commitlint",
+    "mockjs",
     "persistedstate",
     "stylelint",
     "tailwindcss",
