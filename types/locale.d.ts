@@ -8,8 +8,3 @@ export interface LocaleSetting {
   /** 所有可选语言 */
   availableLocales: LocaleType[]
 }
-
-export enum LOCALE {
-  ZH_CN = 'zh_CN',
-  EN_US = 'en',
-}

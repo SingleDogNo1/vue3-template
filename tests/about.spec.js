@@ -8,6 +8,6 @@ describe('about页', async () => {
     const a = wrapper.get('.about')
 
     // TODO 不是 toContain 而是 contain，why??????
-    expect(a.text()).contain('hello, about')
+    expect(a.text()).contain('password')
   })
 })
