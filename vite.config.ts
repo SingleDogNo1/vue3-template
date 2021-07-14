@@ -4,7 +4,6 @@ import { resolve } from 'path'
 import { viteMockServe } from 'vite-plugin-mock'
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
-  console.log('command :>> ', command)
   return {
     plugins: [
       vue(),

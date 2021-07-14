@@ -8,7 +8,7 @@ import type { AxiosTransform, CreateAxiosOptions } from './axiosTransform'
 import { VAxios } from './Axios'
 import { checkStatus } from './checkStatus'
 
-import { useGlobSetting } from '@/hooks/globSettings'
+import { useGlobSetting } from '@/hooks/useGlobSettings'
 
 import { isString } from '@/utils/is'
 

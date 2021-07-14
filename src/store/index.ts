@@ -3,6 +3,7 @@ import { createStore, Store, useStore as baseUseStore } from 'vuex'
 import { AllState } from './types'
 import createPersistedState from 'vuex-persistedstate'
 import user from './modules/user'
+import locale from './modules/locale'
 
 export const store = createStore<AllState>({
   plugins: [
@@ -12,6 +13,7 @@ export const store = createStore<AllState>({
   ],
   modules: {
     user,
+    locale,
   },
 })
 

@@ -9,7 +9,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, reactive, toRefs } from 'vue'
 import { useStore } from '@/store'
-import { useGlobCss } from '@/hooks/globCss'
+import { useGlobCss } from '@/hooks/useGlobCss'
 import { getUserInfoApi } from '@/api/user'
 
 export default defineComponent({
