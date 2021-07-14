@@ -7,7 +7,7 @@ import qs from 'qs'
 import { AxiosCanceler } from './axiosCancel'
 import { isFunction } from '@/utils/is'
 import { errorResult } from './const'
-import { cloneDeep } from 'lodash'
+import { cloneDeep } from 'lodash-es'
 
 export * from './axiosTransform'
 
