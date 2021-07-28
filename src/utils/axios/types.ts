@@ -1,3 +1,7 @@
+import type { AxiosRequestConfig as BaseAxiosRequestConfig } from 'axios'
+
+export type AxiosRequestConfig = BaseAxiosRequestConfig & { loading?: boolean }
+
 export type ErrorMessageMode = 'none' | 'modal' | 'message' | undefined
 
 export interface RequestOptions {

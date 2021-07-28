@@ -1,5 +1,5 @@
-import type { AxiosRequestConfig, AxiosInstance, AxiosResponse } from 'axios'
-import type { RequestOptions, Result, UploadFileParams } from './types'
+import type { AxiosInstance, AxiosResponse } from 'axios'
+import type { RequestOptions, Result, UploadFileParams, AxiosRequestConfig } from './types'
 import type { CreateAxiosOptions } from './axiosTransform'
 
 import axios from 'axios'
@@ -128,10 +128,7 @@ export class VAxios {
   /**
    * @description:  File Upload
    */
-  uploadFile<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    params: UploadFileParams
-  ) {
+  uploadFile<T = any>(config: AxiosRequestConfig, params: UploadFileParams) {
     const formData = new window.FormData()
 
     if (params.data) {
@@ -163,7 +160,7 @@ export class VAxios {
   }
 
   // support form-data
-  supportFormData(config: AxiosRequestConfig & { loading?: boolean }) {
+  supportFormData(config: AxiosRequestConfig) {
     const headers = this.options?.headers
     const contentType = headers?.['Content-Type'] || headers?.['content-type']
 
@@ -181,38 +178,23 @@ export class VAxios {
     }
   }
 
-  get<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    options?: RequestOptions
-  ): Promise<T> {
+  get<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
     return this.request({ ...config, method: 'GET' }, options)
   }
 
-  post<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    options?: RequestOptions
-  ): Promise<T> {
+  post<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
     return this.request({ ...config, method: 'POST' }, options)
   }
 
-  put<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    options?: RequestOptions
-  ): Promise<T> {
+  put<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
     return this.request({ ...config, method: 'PUT' }, options)
   }
 
-  delete<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    options?: RequestOptions
-  ): Promise<T> {
+  delete<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
     return this.request({ ...config, method: 'DELETE' }, options)
   }
 
-  request<T = any>(
-    config: AxiosRequestConfig & { loading?: boolean },
-    options?: RequestOptions
-  ): Promise<T> {
+  request<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
     let conf: AxiosRequestConfig = cloneDeep(config)
     const transform = this.getTransform()
 
