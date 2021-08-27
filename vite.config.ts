@@ -13,6 +13,21 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         prodEnabled: false,
       }),
     ],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            lodash: ['lodash-es'],
+            vue: ['vue'],
+            i18n: ['vue-i18n'],
+            router: ['vue-router'],
+            elementUI: ['element-plus'],
+            vuex: ['vuex'],
+            'vuex-persistedstate': ['vuex-persistedstate'],
+          },
+        },
+      },
+    },
     resolve: {
       alias: [
         {

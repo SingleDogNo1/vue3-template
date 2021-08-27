@@ -3,31 +3,21 @@
     <el-option label="中文" value="zh_CN" />
     <el-option label="英文" value="en" />
   </el-select>
+  <button class="px-4 py-2 border rounded border-dark-800" @click="num++">{{ num }}</button>
   <router-view />
 </template>
 
-<script lang="ts">
-import { computed, defineComponent, reactive, toRefs } from 'vue'
+<script setup lang="ts">
+import { ref, computed } from 'vue'
 import { changeLocale } from './locales'
 import { useStore } from './store'
 
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const store = useStore()
-    const lang = computed(() => store.state.locale.locale)
-    const state = reactive({
-      lang: lang.value,
-    })
-    function change(value) {
-      changeLocale(value)
-    }
-    return {
-      ...toRefs(state),
-      change,
-    }
-  },
-})
-</script>
+const store = useStore()
+const lang = computed(() => store.state.locale.locale)
 
-<style></style>
+function change(value) {
+  changeLocale(value)
+}
+
+const num = ref(0)
+</script>
